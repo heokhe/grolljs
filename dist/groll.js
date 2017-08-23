@@ -3,8 +3,14 @@
     var _version = '1.0.0',
     errorstart = 'Groll(' + _version + '): ';
     $.fn.getGrolled = function (k) {
-            
+        return k.scollTop()
     };
+    $.fn.getGrolledPerc = function (k) {
+        var a = k.getGrolled(),
+        b = k.height(),
+        c = (a / b) * 100;
+        return c;
+    }
     $.fn.grollEvent = function(p) {
         var el = $(this);
         if (arguments.length < 1) {
