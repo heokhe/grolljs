@@ -8,12 +8,14 @@
     function $error(str) {
         throw new Error(errorstart + str);
     };
-    $.fn.getGrolled = function (k) {
-        return k.scrollTop()
+    $.fn.getGrolled = function () {
+        var el = $(this);
+        return el.scrollTop()
     };
-    $.fn.getGrolledPerc = function (k) {
-        var a = k.getGrolled(),
-        b = k.height(),
+    $.fn.getGrolledPerc = function () {
+        var el = $(this);
+        var a = el.getGrolled(),
+        b = el.height(),
         c = (a / b) * 100;
         return c;
     };
@@ -80,7 +82,7 @@
         el.animate({
             scrollTop: 0
         }, sp)
-    }
+    };
     $.fn.grollToBottom = function (sp) {
         if (arguments.length === 0){
             $error('grollToTop method needs at least 1 arguments. (element)(speed (not required) )')
@@ -90,5 +92,5 @@
         el.animate({
             scrollTop: el.height()
         }, sp)
-    }
+    };
 }());
