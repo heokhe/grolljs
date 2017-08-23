@@ -56,10 +56,13 @@
         })
     };
     $.fn.grollProgress = function(func) {
+        if (arguments.length !== 1 || typeof func !== 'function' ) {
+            throw new Error(errorstart + 'grollProgress method needs 1 argument. (function)')
+        }
         var el = $(this),
         a = el.getGrolledPerc();
         $(window).scroll(function () {
             func(a)
         })
-    }
+    };
 }());
