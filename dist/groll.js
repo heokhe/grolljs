@@ -81,4 +81,14 @@
             scrollTop: 0
         }, sp)
     }
+    $.fn.grollToBottom = function (sp) {
+        if (arguments.length === 0){
+            $error('grollToTop method needs at least 1 arguments. (element)(speed (not required) )')
+        }
+        var el = $(this),
+        speed = sp || 0;
+        el.animate({
+            scrollTop: el.height()
+        }, sp)
+    }
 }());
