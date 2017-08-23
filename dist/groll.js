@@ -93,4 +93,13 @@
             scrollTop: el.height()
         }, sp)
     };
+    $.fn.grollToPositionOf = function (target, sp, m) {
+        var el = $(this),
+        speed = sp || 0,
+        margin = m || 10,
+        offset = el.offset();
+        el.animate({
+            scrollTop: offset.top + 10
+        }, speed)
+    };
 }());
