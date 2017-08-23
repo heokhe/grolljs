@@ -20,7 +20,7 @@
                 throw new Error(errorstart + 'offset is required for grollEvent method (number)')
             } else {
                 $(window).scroll(function () {
-                    if ($(this).scrollTop() >= p.offset ){
+                    if ($(this).getGrolled() >= p.offset ){
                         el.removeClass( p.removeClass );
                         el.addClass( p.addClass );
                         if ( p.func && typeof p.func === 'function' ) {
@@ -38,7 +38,7 @@
         var el = $(this),
         d = arguments.length === 0 ? 3 : depth;
         $(window).scroll(function () {
-            var s = $(this).scrollTop();
+            var s = $(this).getGrolled();
             el.css({
                 'transform': 'translate3d(0, ' + s/d + 'px, 0)'
             })
@@ -51,7 +51,7 @@
         }
         $(window).scroll(function () {
             var t = $(this);
-            var e = t.scrollTop();
+            var e = t.getGrolled();
             func(e)
         })
     }
