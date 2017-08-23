@@ -10,7 +10,7 @@
         b = k.height(),
         c = (a / b) * 100;
         return c;
-    }
+    };
     $.fn.grollEvent = function(p) {
         var el = $(this);
         if (arguments.length < 1) {
@@ -33,7 +33,7 @@
                 })
             }
         }
-    }
+    };
     $.fn.grollTranslate3d = function (depth) {
         var el = $(this),
         d = arguments.length === 0 ? 3 : depth;
@@ -43,7 +43,7 @@
                 'transform': 'translate3d(0, ' + s/d + 'px, 0)'
             })
         })
-    }
+    };
     $.fn.grollLiveEffect = function (func) {
         var el = $(this);
         if (arguments.length !== 1){
@@ -54,7 +54,7 @@
             var e = t.getGrolled();
             func(e)
         })
-    }
+    };
     $.fn.grollProgress = function(func) {
         var el = $(this),
         a = el.getGrolledPerc();
