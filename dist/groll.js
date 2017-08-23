@@ -99,7 +99,7 @@
         margin = m || 10,
         offset = el.offset();
         el.animate({
-            scrollTop: offset.top + 10
+            scrollTop: offset.top - margin
         }, speed)
     };
 }());
