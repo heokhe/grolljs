@@ -2,6 +2,9 @@
     'use strict';
     var _version = '1.0.0',
     errorstart = 'Groll(' + _version + '): ';
+    function $error(str) {
+        throw new Error(errorstart + str);
+    }
     $.fn.getGrolled = function (k) {
         return k.scollTop()
     };
@@ -14,10 +17,10 @@
     $.fn.grollEvent = function(p) {
         var el = $(this);
         if (arguments.length < 1) {
-            throw new Error(errorstart + 'grollEvent method needs at least 1 argument.')
+            $error('grollEvent method needs at least 1 argument.')
         } else if ( p && typeof p === 'object' && arguments.length === 1 ){
             if ( !('offset' in p) || !(typeof p.offset === 'number') ) {
-                throw new Error(errorstart + 'offset is required for grollEvent method (number)')
+                $error('offset is required for grollEvent method (number)')
             } else {
                 $(window).scroll(function () {
                     if ($(this).getGrolled() >= p.offset ){
@@ -47,7 +50,7 @@
     $.fn.grollLiveEffect = function (func) {
         var el = $(this);
         if (arguments.length !== 1){
-            throw new Error(errorstart + 'grollLiveEffect needs 1 arguments. (function)')
+            $error('grollLiveEffect needs 1 arguments. (function)')
         }
         $(window).scroll(function () {
             var t = $(this);
@@ -57,7 +60,7 @@
     };
     $.fn.grollProgress = function(func) {
         if (arguments.length !== 1 || typeof func !== 'function' ) {
-            throw new Error(errorstart + 'grollProgress method needs 1 argument. (function)')
+            $error('grollProgress method needs 1 argument. (function)')
         }
         var el = $(this),
         a = el.getGrolledPerc();
