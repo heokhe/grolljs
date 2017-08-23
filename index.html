@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Groll.js</title>
-        <link rel="stylesheet" href="m.css">
+        <!-- <link rel="stylesheet" href="m.css"> -->
         <link rel="stylesheet" href="ltr/css/pui.min.css">
     </head>
     <body dir="ltr">
@@ -100,4 +100,135 @@
         //     })
         // })
     </script>
+    <style media="screen">
+    @import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto+Slab:700|Roboto:300,400,700');
+
+    body{
+        background-color: #f1f1f1;
+        color: #333;
+        direction: ltr !important;
+        font-weight:300;
+        cursor: default;
+    }
+
+    *{
+        text-align: left;
+        font-family: 'roboto';
+        user-select: none;
+    }
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: 'roboto slab';
+        font-weight: 700
+    }
+
+    code, pre{
+        font-family: 'pt mono'
+    }
+
+    hr{
+        background-color: currentColor;
+        border: none;
+        height: 1px !important;
+        width: 90%;
+        margin: 2.5rem 0;
+        opacity: .5;
+    }
+
+    .landing-header{
+        background-color: #333;
+        color:#fff;
+        display: flex;
+        padding: 200px 0;
+        justify-content: center;
+        position: relative;
+        font-size: 1.25em;
+        box-shadow: 0 2px 6px rgba(0,0,0,.5);
+        user-select: none;
+    }
+
+    .landing-header .x-ripple{
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    .landing-header .x-ripple .xr{
+        position: absolute;
+        background-color: #ffc107;
+        border-radius: 50%;
+        height:25vw;
+        width: 25vw;
+        left: calc(50% - 12.5vw);
+        bottom: -12.5vw;
+        transform: scale(0)
+    }
+
+    .landing-header .content{
+        margin-left: -8vw;
+        position: relative;
+        z-index: 10;
+    }
+
+    .landing-header button{
+        position: absolute;
+        z-index: 20
+    }
+
+    .landing-header button#dl{
+        left: 5vw;
+        bottom: -45px;
+    }
+
+    .landing-header .content span{
+        opacity: .75
+    }
+
+    .main{
+        margin: 60px 10vw
+    }
+
+    .pui-col{
+        float: left !important;
+        text-align: left;
+    }
+
+    #features{
+        font-size: 1.05em;
+    }
+
+    #features i{
+        font-size: 3.75em;
+    }
+
+    #features p{
+        text-transform: capitalize;
+    }
+
+    #features *{
+        text-align: center;
+    }
+
+    .prettyprint{
+        background-color: #fafafa;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+        padding: 15px;
+        width: 100%;
+        overflow: auto;
+        line-height: 1.5;
+        font-size: 14px;
+        border-radius: 2.5px;
+    }
+
+    .prettyprint code{
+        font-size: 1em;
+        display: block;
+        white-space: nowrap;
+    }
+
+    </style>
 </html>
