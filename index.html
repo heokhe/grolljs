@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Groll.js</title>
+        <link rel="stylesheet" href="main-ui.css">
+        <link rel="stylesheet" href="ltr/css/pui.min.css">
+    </head>
+    <body dir="ltr">
+        <div class="landing-header">
+            <div class="content">
+                <h2>Groll.js</h2>
+                <span>Lightweight jQuery Plug-ins <br> to make scrolling more fun.</span>
+            </div>
+            <button class="btn fab lg green" id="dl"><i class="material-icons">file_download</i></button>
+            <div class="x-ripple">
+                <div class="xr"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="pui-col xs-0 md-2">
+                        &nbsp;
+                    </div>
+                    <div class="pui-col xs-12 md-8 center-align">
+                        Today, web users will never waste their time. They only look at pages that are interesting to them. As a UI designer, you need to get the user attracted to you.<br>
+                        Scrolling may be a normal thing; but by maneuvering it, you can create a beautiful user interface.<br>
+                        Parallax effects, sudden changes when scrolling down, all of this can help you design.<br>
+                        Groll.js is a lightweight and powerful library for making scrolling more fun for the users, And can do everything that you want.
+                    </div>
+                </div>
+                <hr>
+                <div class="row" id="features">
+                    <div class="pui-col xs-12 md-4">
+                        <i class="material-icons primary-txt">done_all</i>
+                        <h5>Gets Your Work Done.</h5>
+                        <p class="muted-txt">
+                            with groll, you can do everything. events, scroll progresses, and even parallax events.
+                        </p>
+                    </div>
+                    <div class="pui-col xs-12 md-4">
+                        <i class="material-icons primary-txt">free_breakfast</i>
+                        <h5>It's Easy. Drink Your Coffee.</h5>
+                        <p class="muted-txt">
+                            groll is very easy to use, thanks to jquery plugins.<br>
+                            drink your cup of coffee and let it do the works.
+                        </p>
+                    </div>
+                    <div class="pui-col xs-12 md-4">
+                        <i class="material-icons primary-txt">insert_drive_file</i>
+                        <h5>Lightweight (5KB Minified)</h5>
+                        <p class="muted-txt">
+                            groll is very, very small; but it can provide everything you want.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="pui-col xs-12">
+                        <h3>a review to methods</h3>
+                        <div class="pui-col xs-12 sm-6 md-4 lg-30">
+                            <div class="prettyprint">
+                                <code>
+                                    $("#el").grollEvent({<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;offset: 1, <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;addClass: "n",<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;removeClass: "b"<br>
+                                    })
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="ltr/js/pui.js"></script>
+    <!-- <script src="/dist/groll.js"></script> -->
+    <script type="text/javascript">
+        $('.landing-header .content').grollTranslate3d(3);
+        $('.xr').grollLiveEffect(function(scrolled) {
+            a = scrolled/$('.xr').parent().height()*10;
+            $('.xr').css({
+                'transform': 'scale(' + a + ')'
+            })
+        });
+        // $('#dl').grollEvent({
+        //     offset: 1,
+        //     removeClass: 'secondary',
+        //     addClass: 'white'
+        // })
+        // $('#dl').grollLiveEffect(function (scrolled) {
+        //     a = $(document).height();
+        //     b = $('.landing-header').height();
+        //     c =
+        //     $('#dl').css({
+        //         'transform': 'scale(' + a/750 + ')'
+        //     })
+        // })
+    </script>
+</html>

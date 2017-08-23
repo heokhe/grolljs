@@ -1,0 +1,196 @@
+@function nav-color( $c ) {
+    @if lightness($c) > 72 {
+        @return darken($c, 35%);
+    } @else {
+        @return #fff
+    }
+};
+
+@mixin border-bottom($i) {
+    @if lightness($i) > 72 {
+        border-bottom: 1px solid darken($i, 15%)
+    }
+};
+.pui-nav{
+    position: relative;
+    left:0;
+    user-select: none;
+    cursor: default;
+    transition: .5s;
+    .inner{
+        transition: inherit !important
+    }
+    &.primary{
+        background-color: $navbar-bg;
+        @include border-bottom($navbar-bg);
+        @include y-shadow(6, .6);
+        .side .nav-toggle{
+            color: nav-color($navbar-bg);
+        }
+        .title{
+            color: nav-color($navbar-bg)
+        }
+    }
+    // &.transparent{
+    //     .inner{
+    //         padding: 45px 0 !important
+    //     }
+    //     background-color: transparent;
+    //     box-shadow: none;
+    //     .side .nav-toggle{
+    //         color: #fff;
+    //     }
+    //     .title{
+    //         color: #fff
+    //     }
+    // }
+    .inner{
+        padding: 20px 0;
+    }
+    right:0;
+    &.fixed{
+        position: fixed;
+        z-index: 5000;
+        &.top{
+            top:0;
+            margin-bottom: 15px;
+        }
+        &.bottom{
+            bottom: 0;
+            margin-top: 15px;
+        }
+    }
+    .side{
+        display: inline;
+        float: left;
+        margin-right: 15px;
+        margin-left: 5px;
+        margin-top: 5px;
+        .nav-toggle{
+            font-size: 25px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            position: relative;
+            border-radius: 1000px;
+            .ripple-container{
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                top: -6.5px;
+                left: -1.75px;
+            }
+        }
+    }
+    .collapsible{
+        ul.menu{
+            padding: 0;
+            margin:0;
+            li{
+                list-style: none;
+                display: inline-block;
+                margin-top: 2px;
+                a{
+                    color: nav-color($navbar-bg);
+                    transition: .35s;
+                    border-radius: 2.5px;
+                    padding: 13px 20px;
+                    position: relative;
+                    font-size: 13px;
+                    margin: 0 2.5px;
+                    bottom: 1px;
+                    &.icon-only{
+                        padding: 10px;
+                        font-size: 1rem;
+                        .material-icons{
+                            top: -2px;
+                        }
+                    }
+                    .material-icons{
+                        vertical-align: middle;
+                        font-size: 1.25em;
+                        position: relative;
+                    }
+                    .ripple-container{
+                        top:0;
+                        left:0;
+                        bottom:0;
+                        right:0;
+                        position: absolute;
+                    }
+                }
+                &.active{
+                    a{
+                        background-color: t( nav-color($navbar-bg), .125 );
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .side{
+            display: none;
+        }
+        .collapsible{
+            display: inline-block;
+            float: right;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .collapsible{
+            display: none;
+            width: 100%;
+            ul.menu{
+                margin-top: 5px;
+                li{
+                    @include equal-width;
+                    a{
+                        text-align: center;
+                        width: calc(100% - 5px);
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .title{
+            position: relative;
+            bottom: -5px;
+        }
+    }
+
+    .title{
+        font-size: 20px;
+        margin-right: 2px;
+    }
+    ul.pui-nav-tab{
+        margin: 0px;
+        position: relative;
+        padding: 0px;
+        .tab-line{
+            content: '';
+            background-color: #fff;
+            transition: .3s ease;
+            height: 2px;
+            position: absolute;
+            bottom: 0px;
+            display: block;
+            box-shadow: 12px 0 0 #fff;
+        }
+        li{
+            @include equal-width;
+            button{
+                width: 100%;
+                text-align: center;
+                background: none;
+                cursor: pointer;
+                border: none;
+                user-select: none;
+                padding: 20px 0;
+                color: #fff;
+                position: relative;
+            }
+        }
+    }
+}

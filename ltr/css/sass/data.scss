@@ -1,0 +1,49 @@
+@import "colors";
+$primary: $blue-grey;
+$secondary: $amber;
+$gray: gray;
+//---------------------
+$navbar-bg: $primary;
+$input-color: $secondary;
+$toggle-bg: $secondary;
+$loader-stroke-color: $primary;
+//---------------------
+@function col($i) {
+    @return $i*8.33%;
+}
+
+//Adding alpha to colors;
+@function t($c, $r) {
+    $i: 1 - $r;
+    @return transparentize($c, $i);
+}
+
+//Creating shadows
+
+@mixin y-shadow($depth, $alpha) {
+    $y_offset: #{ $depth}px;
+    $blur: #{ $depth * 2 + $depth / 2}px;
+    $spread: #{-$depth/2}px;
+    box-shadow: 0 $y_offset $blur $spread t(#000, $alpha);
+}
+//Select-blocking elements
+@mixin no-select {
+    user-select: none;
+}
+//Clearfixing
+@mixin clearfixing {
+    content: '';
+    clear: both;
+    display: table
+}
+//Equal width!
+@mixin equal-width {
+    display: table-cell;
+    width: 0.01%;
+}
+
+//material icons Fixing
+@mixin md-icons($f) {
+    vertical-align: middle;
+    font-size: $f !important
+}
