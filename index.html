@@ -5,6 +5,7 @@
         <title>Groll.js</title>
         <!-- <link rel="stylesheet" href="m.css"> -->
         <link rel="stylesheet" href="ltr/css/pui.min.css">
+        <meta name="theme-color" content="#ffc107">
     </head>
     <body dir="ltr">
         <div class="landing-header">
@@ -57,27 +58,26 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="pui-col xs-12">
-                        <h3>a review to methods</h3>
-                        <div class="pui-col xs-12 sm-6 md-4 lg-30">
-                            <div class="prettyprint">
-                                <code>
-                                    $("#el").grollEvent({<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;offset: 1, <br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;addClass: "n",<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;removeClass: "b"<br>
-                                    })
-                                </code>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- <h5 class="center-align">Visit groll's documentation at <a href="#b" style='font-family: inherit' class="pui-link no-line">here.</a></h5> -->
+                    <h5 class="center-align">Wait For the Documentation!</h5>
                 </div>
             </div>
         </div>
+        <footer id="page_foot_h">
+            <h5>Made With <i class="material-icons red-txt">favorite</i> And
+                <i class="material-icons yellow-txt">code</i>
+                By <a href="https://github.com/hkh12" target="_blank">@hkh12</a>
+                For A Better Web.
+            </h5>
+            <div id="copyright_z">
+                Licensed Under MIT License <br>
+                All Rights Reserved. &copy;
+            </div>
+        </footer>
     </body>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="ltr/js/pui.js"></script>
-    <!-- <script src="/dist/groll.js"></script> -->
+    <script src="https://rawgit.com/Hkh12/grolljs/master/dist/groll.min.js"></script>
     <script type="text/javascript">
         $('.landing-header .content').grollTranslate3d(3);
         $('.xr').grollLiveEffect(function(scrolled) {
@@ -86,19 +86,6 @@
                 'transform': 'scale(' + a + ')'
             })
         });
-        // $('#dl').grollEvent({
-        //     offset: 1,
-        //     removeClass: 'secondary',
-        //     addClass: 'white'
-        // })
-        // $('#dl').grollLiveEffect(function (scrolled) {
-        //     a = $(document).height();
-        //     b = $('.landing-header').height();
-        //     c =
-        //     $('#dl').css({
-        //         'transform': 'scale(' + a/750 + ')'
-        //     })
-        // })
     </script>
     <style media="screen">
     @import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto+Slab:700|Roboto:300,400,700');
@@ -111,8 +98,39 @@
         cursor: default;
     }
 
+    #page_foot_h{
+        background-color: #333;
+        padding: 25px;
+        color: #cacaca;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-shadow: 1px 2px 0 rgba(0,0,0,.5);
+        box-shadow: 0 -1px 4px -1px rgba(0,0,0,.5)
+    }
+
+    #page_foot_h a{
+        color: #fff;
+        font-family: inherit;
+    }
+
+    #page_foot_h .material-icons{
+        vertical-align: middle;
+        font-size: 1.25em;
+        position: relative;
+        top: -2px
+    }
+
+    #page_foot_h #copyright_z{
+        text-align: center;
+        text-shadow: none;
+        font-weight: 300;
+        margin-top: 5px;
+        opacity: .75
+    }
+
     *{
-        text-align: left;
         font-family: 'roboto';
         user-select: none;
     }
@@ -192,11 +210,6 @@
         margin: 60px 10vw
     }
 
-    .pui-col{
-        float: left !important;
-        text-align: left;
-    }
-
     #features{
         font-size: 1.05em;
     }
@@ -229,6 +242,5 @@
         display: block;
         white-space: nowrap;
     }
-
     </style>
 </html>
