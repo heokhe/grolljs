@@ -55,4 +55,11 @@
             func(e)
         })
     }
+    $.fn.grollProgress = function(func) {
+        var el = $(this),
+        a = el.getGrolledPerc();
+        $(window).scroll(function () {
+            func(a)
+        })
+    }
 }());
