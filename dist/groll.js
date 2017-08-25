@@ -69,7 +69,7 @@
     $.fn.grollProgress = function(d, func) {
         if (arguments.length !== 2 || typeof func !== 'function' || typeof d !== 'object' ) {
             $error('grollProgress method needs 2 arguments. (function, jquery element)')
-        }
+        };
         var el = $(this);
         $(el).scroll(function () {
             var wintop = el.scrollTop(), docheight = content.height(), winheight = el.height();
