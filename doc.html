@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Documentation</title>
+        <link rel="stylesheet" href="https://rawgit.com/piorra/PUI/master/dist/css/pui.min.css">
+        <meta name="theme-color" content="#ffc107">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="doc-header">
+            <div class="content">
+                <h1>Tutorial</h1>
+                <span>Read everything about groll.js</span>
+            </div>
+        </div>
+        <br>
+        <div class="container" id="g_doc">
+            <div class="row padless-col">
+                <div class="pui-col xs-12">
+                    <div class="chip lg">
+                        <h3>Intro</h3>
+                        <p class="muted-txt">
+                            groll is a lightweight and powerful library for
+                            making scrolling fun. groll contains some jquery plug-ins
+                            to apply effect to elements.
+                        </p>
+                        <h3>Install</h3>
+                        <h5>Download</h5>
+                        <p class="muted-txt">
+                            to install groll, download it from
+                            <a href="https://rawgit.com/Hkh12/grolljs/master/dist/groll.min.js" class="link">Rawgit</a>.
+                            <div class="prettyprint">
+                                <code>
+                                    &lt;script src="groll.min.js" type="text/javascript"&gt;&lt;/script&gt;
+                                </code>
+                            </div>
+                        </p>
+                        <h5>CDN</h5>
+                        <p class="muted-txt">
+                            if you want to use groll online, include this codes into your html:
+                            <div class="prettyprint">
+                                <code>
+                                    &lt;script src="https://rawgit.com/Hkh12/grolljs/master/dist/groll.min.js" type="text/javascript"&gt;&lt;/script&gt;
+                                </code>
+                            </div>
+                        </p>
+                        <h3>Github</h3>
+                        <p class="muted-txt">
+                            Visit groll on <a href="https://github.com/hkh12/grolljs" class="link" target="_blank">github</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="pui-col xs-12 md-6">
+                    <div class="chip">
+                        <h5><code>.getGrolled()</code></h5>
+                        <small>none</small>
+                        <p class="muted-txt">
+                            use this method to get the amount of scrolled pixels at the moment.
+                            <h6>Example</h6>
+                            <div class="prettyprint">
+                                <code>
+                                    $(window).getGrolled()<br>
+                                </code>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="pui-col xs-12 md-6">
+                    <div class="chip">
+                        <h5><code>.grollEvent()</code></h5>
+                        <small>Object (offset* , class to be added, class to be removed)</small>
+                        <p class="muted-txt">
+                            this method is used to modify the classes of
+                            an element, after scrolling more than a defined offset.
+                            <h6>Example</h6>
+                            <div class="prettyprint">
+                                <code>
+                                    $('#navbar').grollEvent({<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;offset: 200,<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;addClass: 'colored',<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;removeClass: 'transparent'<br>
+                                    })
+                                </code>
+                            </div><br>
+                            <b>Fact</b>: the example above, is a great effect for your fixed
+                            navigation bars. use it for landing pages.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://rawgit.com/piorra/PUI/master/dist/js/pui.js"></script>
+    <script src="https://rawgit.com/Hkh12/grolljs/master/dist/groll.min.js"></script>
+    <script type="text/javascript">
+        $('.doc-header .content').grollTranslate3d()
+    </script>
+</html>
