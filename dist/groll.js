@@ -3,7 +3,7 @@
     if ('undefined' === typeof jQuery) {
         $error('jQuery is not defined! :|')
     };
-    var _version = '1.0.0',
+    var _version = '0.1-alpha',
     errorstart = 'Groll(' + _version + '): ';
     function $error(str) {
         throw new Error(errorstart + str);
