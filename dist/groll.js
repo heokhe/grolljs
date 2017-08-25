@@ -2,7 +2,7 @@
     'use strict';
     if ('undefined' === typeof jQuery) {
         $error('jQuery is not defined! :|')
-    }
+    };
     var _version = '1.0.0',
     errorstart = 'Groll(' + _version + '): ';
     function $error(str) {
@@ -12,13 +12,16 @@
         var el = $(this);
         return el.scrollTop()
     };
-    $.fn.getGrolledPerc = function () {
-        var el = $(this);
-        var a = el.getGrolled(),
-        b = el.height(),
-        c = (a / b) * 100;
-        return c;
-    };
+    //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
+    //CAUSION: Bug in this method!
+        // $.fn.getGrolledPerc = function () {
+        //     var el = $(this);
+        //     var a = el.getGrolled(),
+        //     b = el.height(),
+        //     c = (a / b) * 100;
+        //     return c;
+        // };
+    //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
     $.fn.grollEvent = function(p) {
         var el = $(this);
         if (arguments.length < 1) {
@@ -63,14 +66,15 @@
             func(e)
         })
     };
-    $.fn.grollProgress = function(func) {
-        if (arguments.length !== 1 || typeof func !== 'function' ) {
-            $error('grollProgress method needs 1 argument. (function)')
+    $.fn.grollProgress = function(d, func) {
+        if (arguments.length !== 2 || typeof func !== 'function' || typeof d !== 'object' ) {
+            $error('grollProgress method needs 2 arguments. (function, jquery element)')
         }
-        var el = $(this),
-        a = el.getGrolledPerc();
-        $(window).scroll(function () {
-            func(a)
+        var el = $(this);
+        $(el).scroll(function () {
+            var wintop = el.scrollTop(), docheight = content.height(), winheight = el.height();
+            var totalScroll = (wintop/(docheight-winheight))*100;
+            func(totalScroll);
         })
     };
     $.fn.grollToTop = function (sp) {
