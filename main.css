@@ -103,6 +103,20 @@ hr{
     z-index: 10;
 }
 
+.landing-header .content .version{
+    opacity: 1;
+    top: -.63em;
+    position: relative;
+    background-color: #f44336;
+    color: inherit;
+    box-shadow: 0 9px 15px -4px rgba(0,0,0,.5);
+    font-size: 50%;
+    font-family: 'pt mono';
+    border-radius: 1000vw;
+    padding: 5px 17px;
+    right: -.5em
+}
+
 .landing-header a{
     position: absolute;
     z-index: 20
@@ -111,6 +125,11 @@ hr{
 .landing-header a#dl{
     left: 5vw;
     bottom: -45px;
+}
+
+.landing-header a#git_link{
+    left: calc(5vw + 95px);
+    bottom: -30px;
 }
 
 .landing-header .content span{
