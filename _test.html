@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test!</title>
+    </head>
+    <body>
+        <div class="progress">
+            <div class="line">
+
+            </div>
+        </div>
+    </body>
+    <style media="screen">
+        .progress{
+            height: 100vh;
+            background-color: #000;
+            position: fixed;
+            right:0;
+            top:0;
+            bottom:0;
+            width: 10px;
+        }
+        .progress .line{
+            width:100%;
+            top:0;
+            background-color: red;
+        }
+        body{
+            min-height: 200vh
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="dist/groll.js"></script>
+</html>
