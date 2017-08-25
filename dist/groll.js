@@ -72,12 +72,12 @@
         };
         var el = $(this);
         $(el).scroll(function () {
-            var wintop = el.scrollTop(),
-            docheight = d.height(),
-            winheight = el.height();
-            //var totalScroll = (wintop/(docheight-winheight))*100;
-            var totalScroll = docheight/wintop * 100;
-            func(totalScroll);
+                //var elem = $(this);
+		        elem.scroll(function() {
+		        var wintop = el.scrollTop(), docheight = content.height(), winheight = el.height();
+		        var totalScroll = (wintop/(docheight-winheight))*100;
+      	        func(totalScroll);
+		    });
         })
     };
     $.fn.grollToTop = function (sp) {
