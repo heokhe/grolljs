@@ -259,6 +259,6 @@ small::before{
     content: '*/'
 }
 
-.btn{
+.btn:not(.fab){
     text-transform: capitalize;
 }
