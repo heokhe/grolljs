@@ -147,7 +147,7 @@ hr{
 }
 
 .landing-header a .btn{
-    transform-origin: center 60%;
+    transition: all .3s ease, transform .7s cubic-bezier(1,0,0,1), transform .35s ease-out 
 }
 
 .landing-header a.is-hidden .btn{
