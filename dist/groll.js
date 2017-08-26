@@ -105,9 +105,10 @@
         var el = $(this),
         speed = sp || 0,
         margin = m || 10,
-        offset = target.offset();
+        tarElem = $(target),
+        offset = tarElem.offset().top;
         el.animate({
-            scrollTop: offset.top - margin
+            scrollTop: offset
         }, speed)
     };
     $.fn.grollTo = function (tar, sp) {
