@@ -37,8 +37,9 @@ body{
     text-align: center;
     text-shadow: none;
     font-weight: 300;
-    margin-top: 5px;
-    opacity: .75
+    margin-top: 7.5px;
+    opacity: .75;
+    display: inline-block;
 }
 
 *{
