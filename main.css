@@ -146,6 +146,15 @@ hr{
     z-index: 20
 }
 
+.landing-header a .btn{
+    transform-origin: center 60%;
+}
+
+.landing-header a.is-hidden .btn{
+    transform: scale(0) translateY(100%);
+    opacity: 0;
+}
+
 .landing-header a#dl{
     left: 5vw;
     bottom: -45px;

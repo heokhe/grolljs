@@ -92,5 +92,11 @@
                 'transform': 'scale(' + a + ')'
             })
         });
+        $('.landing-header a').is(function () {
+            $(this).grollEvent({
+                offset: $(this).offset().top - $(this).height(),
+                addClass: 'is-hidden'
+            })
+        })
     </script>
 </html>
