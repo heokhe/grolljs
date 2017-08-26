@@ -4,7 +4,7 @@ jquery Plugins to make scrolling more fun.
 To use groll, download it from github, and include it into your project:<br>
 <code>
     &lt;script src="groll.js" type="text/javascript"&gt;&lt;/script&gt;<br>
-</code>
+</code><br>
 <code>
 &lt;script src="groll.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </code>
