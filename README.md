@@ -17,4 +17,4 @@ Or, Use groll from rawgit:<br>
 if you had any issues, report it via <a href="https://github.com/hkh12/grolljs/issues">project's issues tracker</a>. I will answer you as fast as I can.
 <br>
 <br>
-Made with &heart; by <a href='https://github.com/hkh12'>Hosein Khansari</a>.
+Made with &hearts; by <a href='https://github.com/hkh12'>Hosein Khansari</a>.
