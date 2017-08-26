@@ -65,7 +65,7 @@ hr{
 }
 
 .landing-header{
-    background-color: #333;
+    background-color: #263238;
     color:#fff;
     display: flex;
     padding: 200px 0;
@@ -107,19 +107,24 @@ hr{
     opacity: 1;
     top: -5px;
     position: relative;
-    background-color: #f44336;
+    background-color: #e91e63;
     color: inherit;
     box-shadow: 0 9px 15px -4px rgba(0,0,0,.5);
     font-size: 50%;
     font-family: 'pt mono';
     border-radius: 1000vw;
     padding: 5px 17px;
-    background-image: linear-gradient(90deg, rgba(255, 193, 7, .5), transparent);
-    animation: version-trig 2s infinite cubic-bezier(1,0,0,1);
+    background-image: linear-gradient(45deg, rgba(255, 193, 7, .5), transparent);
+    /*animation: version-trig 2s infinite cubic-bezier(1,0,0,1);*/
     transform-origin: center bottom;
     background-position: 50% 50%;
     display: inline-block;
     vertical-align: middle;
+}
+
+.landing-header .content .version .release{
+    opacity: .75;
+    font-size: 65%;
 }
 
 .version *{
@@ -208,8 +213,9 @@ hr{
     text-transform: capitalize;
 }
 
-#g_doc .link{
+a.link{
     color: #4caf50;
+    font: inherit;
 }
 
 small{
