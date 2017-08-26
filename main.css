@@ -215,9 +215,9 @@ hr{
 
 .doc-header{
     background-color: #4caf50;
+    padding: 150px 0;
     color: #fff;
     display: flex;
-    padding: 150px 0;
     justify-content: center;
     text-align: center;
     box-shadow: 0 2px 6px rgba(0,0,0,0.5);
@@ -229,6 +229,10 @@ hr{
 
 #g_doc p{
     text-transform: capitalize;
+}
+
+#g_doc{
+    padding-top: 55px;
 }
 
 a.link{
@@ -261,4 +265,15 @@ small::before{
 
 .btn:not(.fab){
     text-transform: capitalize;
+}
+
+.doc-header{
+    position: relative;
+}
+
+.doc-header a#report{
+    position: absolute;
+    z-index: 2;
+    left: 5vw;
+    bottom: -45px
 }
