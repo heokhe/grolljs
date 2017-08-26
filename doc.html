@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Documentation</title>
-        <link rel="stylesheet" href="https://rawgit.com/piorra/PUI/master/dist/css/pui.min.css">
+        <link rel="stylesheet" href="https://rawgit.com/piorra/PUI/master/dist/css/pui.css">
         <meta name="theme-color" content="#ffc107">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="main.css">
@@ -20,7 +20,7 @@
             </a>
         </div>
         <div class="container" id="g_doc">
-            <div class="row padless-col">
+            <div class="row">
                 <div class="pui-col xs-12">
                     <div class="chip lg">
                         <h3>Intro</h3>
@@ -40,8 +40,7 @@
                         </p>
                         <h5>Download</h5>
                         <p class="muted-txt">
-                            to install groll, download it from
-                            <a href="https://rawgit.com/Hkh12/grolljs/master/dist/groll.min.js" class="link">Rawgit</a>.
+                            to install groll, download it from github.
                             <div class="prettyprint">
                                 <code>
                                     &lt;script src="groll.min.js" type="text/javascript"&gt;&lt;/script&gt;
@@ -115,6 +114,51 @@
                             </div>
                         </p>
                     </div>
+                    <div class="chip">
+                        <h5><code>.grollLiveEffect()</code></h5>
+                        <small>function( undefined variable )</small>
+                        <blockquote>
+                            That's great for a live UI.
+                        </blockquote>
+                        <p class="muted-txt">
+                            This method, can do functions, based on the scrolled pixels of page,
+                            at the moment.
+                            <h6>Example</h6>
+                            <div class="prettyprint">
+                                <code>
+                                    $("body").grollLiveEffect(function(a){<br>
+                                        console.log(a)<br>
+                                        <span class="code-comment js">writes the scrolled pixels at the moment.</span><br>
+                                    })
+                                </code>
+                            </div>
+                            <br>
+                            So, this one was a very basic example. now we wanna go higher
+                            and make effects with this method.<br>
+                            <br>
+                            <b>Imagine:</b> you want to style your fixed navigation bar.
+                            you want to make a <br><br>
+                            <div class="prettyprint">
+                                <code>
+                                    background-color: rgba(255,0,0,(a number based on scrolled pixels))
+                                </code>
+                            </div><br>
+                            for the navbar.
+                            <br>
+                            Groll is here to rescue!
+                            <br><br>
+                            <div class="prettyprint">
+                                <code>
+                                    $("#myNav").grollLiveEffect(function(foo){<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;if (foo < 250){<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var a = foo / 250;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#myNav").css('background-color', 'rgba(255,0,0,' + a + ')')<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                    })
+                                </code>
+                            </div>
+                        </p>
+                    </div>
                 </div>
                 <div class="pui-col xs-12 md-6">
                     <div class="chip">
@@ -127,9 +171,9 @@
                             <div class="prettyprint">
                                 <code>
                                     $('#navbar').grollEvent({<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;offset: 200,<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;addClass: 'colored',<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;removeClass: 'transparent'<br>
+                                        offset: 200,<br>
+                                        addClass: 'colored',<br>
+                                        removeClass: 'transparent'<br>
                                     })
                                 </code>
                             </div><br>

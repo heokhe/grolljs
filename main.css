@@ -109,19 +109,20 @@ hr{
     opacity: 1;
     top: -5px;
     position: relative;
-    background-color: #e91e63;
+    background-color: #3f51b5;
     color: inherit;
     box-shadow: 0 9px 15px -4px rgba(0,0,0,.5);
     font-size: 50%;
     font-family: 'pt mono';
     border-radius: 1000vw;
     padding: 5px 17px;
-    background-image: linear-gradient(45deg, rgba(255, 193, 7, .5), transparent);
+    background-image: linear-gradient(45deg, #9c27b0, transparent);
     /*animation: version-trig 2s infinite cubic-bezier(1,0,0,1);*/
-    transform-origin: center bottom;
+    animation: koob 2s ease infinite;
     background-position: 50% 50%;
     display: inline-block;
     vertical-align: middle;
+    transform-origin: 50% 50%
 }
 
 .landing-header .content .version .release{
@@ -131,6 +132,17 @@ hr{
 
 .version *{
     font-family: inherit;
+}
+
+@keyframes koob {
+    10%{
+        transform: scale(1.5);
+        box-shadow: 0 30px 27px -6px rgba(0,0,0,.45);
+    }
+    20%, from, to{
+        transform: scale(1);
+        box-shadow: 0 9px 15px -4px rgba(0,0,0,.5);
+    }
 }
 
 @keyframes version-trig {
@@ -149,6 +161,10 @@ hr{
 
 .landing-header a .btn{
     transition: all .3s ease, transform .7s cubic-bezier(1,0,0,1), transform .35s ease-out
+}
+
+.landing-header a.is-hidden{
+    pointer-events: none;
 }
 
 .landing-header a.is-hidden .btn{
@@ -229,6 +245,7 @@ hr{
 
 #g_doc p{
     text-transform: capitalize;
+    line-height: 1.7
 }
 
 #g_doc{
@@ -276,4 +293,11 @@ small::before{
     z-index: 2;
     left: 5vw;
     bottom: -45px
+}
+
+.inline-prep{
+    background-color: #eee;
+    color: #333;
+    padding: 2px;
+    border-radius: 2px;
 }
