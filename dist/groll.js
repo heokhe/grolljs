@@ -89,25 +89,32 @@
         speed = sp || 0;
         el.animate({
             scrollTop: 0
-        }, sp)
+        }, speed)
     };
-    $.fn.grollToBottom = function (sp) {
-        if (arguments.length === 0){
-            $error('grollToTop method needs at least 1 arguments. (element)(speed (not required) )')
-        }
-        var el = $(this),
-        speed = sp || 0;
-        el.animate({
-            scrollTop: el.height()
-        }, sp)
-    };
+    // $.fn.grollToBottom = function (sp) {
+    //     // if (arguments.length === 0){
+    //     //     $error('grollToTop method needs at least 1 arguments. (element)(speed (not required) )')
+    //     // }
+    //     var el = $(this),
+    //     speed = sp || 0;
+    //     el.animate({
+    //         scrollTop: el.height()
+    //     }, sp)
+    // };
     $.fn.grollToPositionOf = function (target, sp, m) {
         var el = $(this),
         speed = sp || 0,
         margin = m || 10,
-        offset = el.offset();
+        offset = target.offset();
         el.animate({
             scrollTop: offset.top - margin
         }, speed)
     };
+    $.fn.grollTo = function (tar, sp) {
+        var el = $(this),
+        speed = sp || 0;
+        el.animate({
+            scrollTop: tar
+        }, speed)
+    }
 }());
