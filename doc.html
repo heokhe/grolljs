@@ -32,6 +32,14 @@
                             to apply effect to elements.
                         </p>
                         <h3>Install</h3>
+                        <p class="muted-txt">
+                            First of all, include jquery into your HTML:
+                            <div class="prettyprint">
+                                <code>
+                                    &lt;script src="https://code.jquery.com/jquery-3.2.1.min.js"&gt;&lt;/script&gt;
+                                </code>
+                            </div>
+                        </p>
                         <h5>Download</h5>
                         <p class="muted-txt">
                             to install groll, download it from
@@ -44,7 +52,7 @@
                         </p>
                         <h5>CDN</h5>
                         <p class="muted-txt">
-                            if you want to use groll online, include this codes into your html:
+                            if you want to use groll online, include this code into your html:
                             <div class="prettyprint">
                                 <code>
                                     &lt;script src="https://rawgit.com/Hkh12/grolljs/master/dist/groll.min.js" type="text/javascript"&gt;&lt;/script&gt;
@@ -93,7 +101,7 @@
                             </div>
                         </p>
                     </div>
-                    <div class="chip">
+                    <div class="chip" id="g_to_top">
                         <h5><code>.grollToTop()</code></h5>
                         <small>number (speed)</small>
                         <p class="muted-txt">
@@ -151,6 +159,10 @@
                                 </code>
                             </div>
                         </p>
+                    </div>
+                    <div class="chip">
+                        <h5><code>.grollToBottom()</code></h5>
+                        <a href="javascript:$('html,body').grollToPositionOf($('#g_to_top'),1000, 10)">see</a>
                     </div>
                 </div>
             </div>

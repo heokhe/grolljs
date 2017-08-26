@@ -258,3 +258,7 @@ small::before{
 .prettyprint .code-comment.js::after{
     content: '*/'
 }
+
+.btn{
+    text-transform: capitalize;
+}
