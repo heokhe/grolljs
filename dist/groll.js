@@ -14,13 +14,13 @@
     };
     //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
     //CAUSION: Bug in this method!
-        // $.fn.getGrolledPerc = function () {
-        //     var el = $(this);
-        //     var a = el.getGrolled(),
-        //     b = el.height(),
-        //     c = (a / b) * 100;
-        //     return c;
-        // };
+    // $.fn.getGrolledPerc = function () {
+    //     var el = $(this);
+    //     var a = el.getGrolled(),
+    //     b = el.height(),
+    //     c = (a / b) * 100;
+    //     return c;
+    // };
     //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
     $.fn.grollEvent = function(p) {
         var el = $(this);
@@ -68,19 +68,19 @@
     };
     //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
     //bug, bug, bug:
-        // $.fn.grollProgress = function(d, func) {
-        //     if (arguments.length !== 2 || typeof func !== 'function' || typeof d !== 'object' ) {
-        //         $error('grollProgress method needs 2 arguments. (function, jquery element)')
-        //     };
-        //     var el = $(this);
-        //     $(el).scroll(function () {
-        //             var elem = $(this);
-    	// 	        var wintop = elem.scrollTop(), docheight = d.height(), winheight = elem.height();
-    	// 	        var totalScroll = (wintop/(docheight-winheight))*-100;
-        //   	        func(totalScroll);
-        //     })
-        // };
-        //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
+    // $.fn.grollProgress = function(d, func) {
+    //     if (arguments.length !== 2 || typeof func !== 'function' || typeof d !== 'object' ) {
+    //         $error('grollProgress method needs 2 arguments. (function, jquery element)')
+    //     };
+    //     var el = $(this);
+    //     $(el).scroll(function () {
+    //             var elem = $(this);
+    // 	        var wintop = elem.scrollTop(), docheight = d.height(), winheight = elem.height();
+    // 	        var totalScroll = (wintop/(docheight-winheight))*-100;
+    //   	        func(totalScroll);
+    //     })
+    // };
+    //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
     $.fn.grollToTop = function (sp) {
         if (arguments.length === 0){
             $error('grollToTop method needs at least 1 arguments. (element)(speed (not required) )')
