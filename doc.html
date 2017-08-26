@@ -93,6 +93,22 @@
                             </div>
                         </p>
                     </div>
+                    <div class="chip">
+                        <h5><code>.grollToTop()</code></h5>
+                        <small>number (speed)</small>
+                        <p class="muted-txt">
+                            This method scrolls an element to top (0 pixel), in a defined speed.
+                            <h6>Example</h6>
+                            <div class="prettyprint">
+                                <code>
+                                    $("html, body").grollToTop()<br>
+                                    <span class="code-comment js"> &#9757; This one has no speed</span><br>
+                                    <span class="code-comment js">we want the page, to scroll to top in 3 seconds:</span><br>
+                                    $("html, body").grollToTop(3000)
+                                </code>
+                            </div>
+                        </p>
+                    </div>
                 </div>
                 <div class="pui-col xs-12 md-6">
                     <div class="chip">
@@ -120,6 +136,20 @@
                         <small>number (target*, speed)</small>
                         <p class="muted-txt">
                             this method is used to scroll an element, to defined target (pixels), with a defined speed.
+                            <h6>Example</h6>
+                            <div class="prettyprint">
+                                <code>
+                                    $("html, body").grollTo(100)
+                                </code>
+                            </div>
+                            <br>
+                            This one, scrolls the page, without any speed.<br>
+                            but, we want it to scroll to defined target in 2 seconds, so we have: <br><br>
+                            <div class="prettyprint">
+                                <code>
+                                    $("html, body").grollTo(100, 2000)
+                                </code>
+                            </div>
                         </p>
                     </div>
                 </div>

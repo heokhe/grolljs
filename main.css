@@ -245,3 +245,16 @@ small{
 small::before{
     content: 'Arguments: '
 }
+
+.prettyprint .code-comment{
+    color: #888;
+    font: inherit;
+}
+
+.prettyprint .code-comment.js::before{
+    content: '/*'
+}
+
+.prettyprint .code-comment.js::after{
+    content: '*/'
+}
