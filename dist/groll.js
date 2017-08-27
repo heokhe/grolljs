@@ -59,13 +59,17 @@
         if (arguments.length < 1){
             $error('grollLiveEffect needs 1 arguments. (function)')
         }
-        var wait = time || 100;
+        var wait = time || 100,
+        to_do = function () {
+            func( $(window).scrollTop() )
+        }
         // $(window).scroll(function () {
         //     var t = $(this);
         //     var e = t.getGrolled();
         //     func(e)
         // })
-        $(window).on('scroll', _.throttle( func( $(window).getGrolled() ), wait ))
+        //$(window).on('scroll', _.throttle( func( $(window).getGrolled() ), wait ))
+        jQuery(window).on('scroll', _.throttle( to_do , wait));
     };
     $.fn.grollToTop = function (sp) {
         var el = $(this),
