@@ -103,6 +103,7 @@ hr{
     margin-left: -8vw;
     position: relative;
     z-index: 10;
+    perspective: 900px
 }
 
 .landing-header .content .version{
