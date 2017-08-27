@@ -1,12 +1,21 @@
+/*
+    Groll.js - v1.0-alpha
+    Copyright 2017 Hosein Khansari
+    Licensed under MIT license
+    github: https://github.com/hkh12/grolljs
+*/
 (function() {
     'use strict';
     if ('undefined' === typeof jQuery) {
         $error('jQuery is not defined! :|')
     };
+    if ( 'undefined' === typeof _ ) {
+        $error('lodash is required for groll.')
+    }
     var _version = '1.0-alpha',
     errorstart = 'Groll(' + _version + '): ';
     function $error(str) {
-        throw new Error(errorstart + str);
+        console.error(errorstart + str);
     };
     $.fn.getGrolled = function () {
         var el = $(this);
@@ -65,6 +74,7 @@
             var e = t.getGrolled();
             func(e)
         })
+        $(window).on('scroll', _.throttle( func( $(window).getGrolled() ), 100 ))
     };
     //\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/\|/
     //bug, bug, bug:
