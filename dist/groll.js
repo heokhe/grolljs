@@ -80,7 +80,7 @@
         // el.animate({
         //     scrollTop: offset - m
         // }, speed)
-        el.grollTo( offset - m, speed )
+        el.grollTo( offset - margin, speed )
     };
     $.fn.grollTo = function (tar, sp) {
         var el = $(this),
