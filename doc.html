@@ -207,6 +207,51 @@
                             according to their names, the previous method scrolls the element to top; but this one scrolls to the bottom.
                         </p>
                     </div>
+                    <div class="chip">
+                        <h5><code>.grollTo()</code></h5>
+                        <small>number (target*), (speed, default: 0)</small>
+                        <p class="muted-txt">
+                            With the method, you can scroll to every place of page (or element), with a defined speed.
+                            <h6>Example</h6>
+                            <div class="prettyprint">
+                                <code>
+                                    <span class="code-comment js">Scrolls to 50 pixels, with No speed</span><br>
+                                    $("html, body").grollTo(50)<br>
+                                    <span class="code-comment js">Scrolls to 50 pixels, in 2.5 seconds</span><br>
+                                    $("html, body").grollTo(50, 2500)
+                                </code>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="chip">
+                        <h5><code>.grollToPositionOf()</code></h5>
+                        <small>jQuery element*, number (speed, default: 0) (margin, default: 10)</small>
+                        <p class="muted-txt">
+                            this method, hepls to scroll the page to the position of an element (using jQuery <code>.offset()</code> method), with an defined margin
+                            , with a defined speed.
+                            <h6>Example</h6>
+                            <div class="prettyprint">
+                                <code>
+                                    $("html, body").grollToPositionOf( $("#myElem") )<br>
+                                    <span class="code-comment js">scrolls to position of #myElem, with no speed and a margin of 10 pixels.</span><br>
+                                    $("html, body").grollToPositionOf( $("#myElem"), 3000, 50 )<br>
+                                    <span class="code-comment js">scrolls to position of #myElem in 3 seconds, with a margin of 50px.</span>
+                                </code>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="pui-col xs-12 md-8 md-offset-2 center-align">
+                    <h3>Reporting Issues</h3>
+                    <p class="muted-txt">
+                        If you found any bugs in groll, or if had any issue, share them <a href="https://github.com/hkh12/grolljs/issues">here</a>.<br>
+                        I will respond as fast as i can.
+                    </p>
+                    <br><br>
+                    <h5>Thank You Using Groll!</h5>
                 </div>
             </div>
         </div>
