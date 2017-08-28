@@ -48,7 +48,7 @@
         var el = $(this),
         wait = time || 100,
         s = $(window).getGrolled(),
-        d = arguments.length === 0 ? 3 : depth;
+        d = 3 || depth;
         $(el).grollLiveEffect(function (e) {
             $(el).css('transform', 'translate3d(0, ' + s/d + 'px,0)')
         }, wait)
