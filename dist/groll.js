@@ -13,7 +13,7 @@
         $error('lodash is required for groll.')
     }
     var _version = '1.0-alpha',
-    errorstart = 'Groll(' + _version + '): ';
+    errorstart = 'Groll (' + _version + '): ';
     function $error(str) {
         console.error(errorstart + str);
     };
@@ -61,7 +61,7 @@
         var wait = time || 100,
         to_do = function () {
             func( $(window).scrollTop() )
-        }
+        };
         jQuery(window).on('scroll', _.throttle( to_do , wait));
     };
     $.fn.grollToTop = function (sp) {
@@ -88,5 +88,5 @@
         el.animate({
             scrollTop: tar
         }, speed)
-    }
+    };
 }());
