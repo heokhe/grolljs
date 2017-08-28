@@ -44,15 +44,14 @@
             }
         }
     };
-    $.fn.grollTranslate3d = function (depth) {
+    $.fn.grollTranslate3d = function (depth, time) {
         var el = $(this),
+        wait = time || 100,
+        s = $(window).getGrolled(),
         d = arguments.length === 0 ? 3 : depth;
-        $(window).scroll(function () {
-            var s = $(this).getGrolled();
-            el.css({
-                'transform': 'translate3d(0, ' + s/d + 'px, 0)'
-            })
-        })
+        $(el).grollLiveEffect(function (e) {
+            $(el).css('transform', 'translate3d(0, ' + s/d + 'px,0)')
+        }, wait)
     };
     $.fn.grollLiveEffect = function (func, time) {
         var el = $(this);
@@ -63,12 +62,6 @@
         to_do = function () {
             func( $(window).scrollTop() )
         }
-        // $(window).scroll(function () {
-        //     var t = $(this);
-        //     var e = t.getGrolled();
-        //     func(e)
-        // })
-        //$(window).on('scroll', _.throttle( func( $(window).getGrolled() ), wait ))
         jQuery(window).on('scroll', _.throttle( to_do , wait));
     };
     $.fn.grollToTop = function (sp) {
@@ -78,14 +71,14 @@
             scrollTop: 0
         }, speed)
     };
-    $.fn.grollToPositionOf = function (target, sp, m) {
+    $.fn.grollToPositionOf = function (target, sp) {
         var el = $(this),
         speed = sp || 0,
         margin = m || 10,
         tarElem = $(target),
         offset = tarElem.offset().top;
         el.animate({
-            scrollTop: offset
+            scrollTop: offset - m
         }, speed)
     };
     $.fn.grollTo = function (tar, sp) {
