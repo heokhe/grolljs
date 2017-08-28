@@ -47,11 +47,13 @@
     $.fn.grollTranslate3d = function (depth, time) {
         var el = $(this),
         wait = time || 100,
-        s = $(window).getGrolled(),
         d = 3 || depth;
-        $(el).grollLiveEffect(function (e) {
-            $(el).css('transform', 'translate3d(0, ' + s/d + 'px,0)')
-        }, wait)
+        var to_do = function() {
+            el.css({
+                'transform': 'translate3d(0, ' + $(window).getGrolled()/d + ', 0)'
+            })
+        };
+        jQuery(window).on('scroll', _.throttle(to_do, wait));
     };
     $.fn.grollLiveEffect = function (func, time) {
         var el = $(this);
