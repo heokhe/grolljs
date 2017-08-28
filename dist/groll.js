@@ -7,7 +7,7 @@
 (function() {
     'use strict';
     if ('undefined' === typeof jQuery) {
-        $error('jQuery is not defined! :|')
+        $error('jQuery is required for groll')
     };
     if ( 'undefined' === typeof _ ) {
         $error('lodash is required for groll.')
@@ -77,9 +77,6 @@
         margin = m || 10,
         tarElem = $(target),
         offset = tarElem.offset().top;
-        // el.animate({
-        //     scrollTop: offset - m
-        // }, speed)
         el.grollTo( offset - margin, speed )
     };
     $.fn.grollTo = function (tar, sp) {
