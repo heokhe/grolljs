@@ -117,10 +117,7 @@
                     </div>
                     <div class="chip">
                         <h5><code>.grollLiveEffect()</code></h5>
-                        <small>function( undefined variable )</small>
-                        <blockquote>
-                            That's great for a live UI.
-                        </blockquote>
+                        <small>anonymous function( argument: undefined variable ), number ( speed to update (milliseconds) , default: 1000 )</small>
                         <p class="muted-txt">
                             This method, can do functions, based on the scrolled pixels of page,
                             at the moment.
@@ -129,7 +126,7 @@
                                 <code>
                                     $("body").grollLiveEffect(function(a){<br>
                                         console.log(a)<br>
-                                        <span class="code-comment js">writes the scrolled pixels at the moment.</span><br>
+                                        <span class="code-comment js">writes the scrolled pixels at the moment. (updates at every 0.1 seconds)</span><br>
                                     })
                                 </code>
                             </div>
@@ -155,7 +152,7 @@
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var a = foo / 250;<br>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#myNav").css('background-color', 'rgba(255,0,0,' + a + ')')<br>
                                     &nbsp;&nbsp;&nbsp;&nbsp;}<br>
-                                    })
+                                    }, 0.1)
                                 </code>
                             </div>
                         </p>
