@@ -12,7 +12,7 @@
     if ( 'undefined' === typeof _ ) {
         $error('lodash is required for groll.')
     }
-    var _version = '1.0-alpha',
+    var _version = '1.0.0',
     errorstart = 'Groll (' + _version + '): ';
     function $error(str) {
         console.error(errorstart + str);
