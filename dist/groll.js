@@ -44,16 +44,15 @@
             }
         }
     };
-    $.fn.grollTranslate3d = function (depth, time) {
+    $.fn.grollTranslate3d = function (depth) {
         var el = $(this),
-        wait = time || 100,
-        d = 3 || depth;
-        var to_do = function() {
+        d = arguments.length === 0 ? 3 : depth;
+        $(window).scroll(function () {
+            var s = $(this).getGrolled();
             el.css({
-                'transform': 'translate3d(0, ' + $(window).getGrolled()/d + ', 0)'
+                'transform': 'translate3d(0, ' + s/d + 'px, 0)'
             })
-        };
-        jQuery(window).on('scroll', _.throttle(to_do, wait));
+        })
     };
     $.fn.grollLiveEffect = function (func, time) {
         var el = $(this);
