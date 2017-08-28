@@ -71,7 +71,7 @@
             scrollTop: 0
         }, speed)
     };
-    $.fn.grollToPositionOf = function (target, sp) {
+    $.fn.grollToPositionOf = function (target, sp, m) {
         var el = $(this),
         speed = sp || 0,
         margin = m || 10,
