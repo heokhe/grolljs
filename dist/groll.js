@@ -67,9 +67,12 @@
     $.fn.grollToTop = function (sp) {
         var el = $(this),
         speed = sp || 0;
-        el.animate({
-            scrollTop: 0
-        }, speed)
+        el.grollTo(0, speed)
+    };
+    $.fn.grollToBottom = function (sp) {
+        var el = $(this),
+        speed = sp || 0;
+        el.grollTo( el.height() , speed)
     };
     $.fn.grollToPositionOf = function (target, sp, m) {
         var el = $(this),
