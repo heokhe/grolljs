@@ -77,9 +77,10 @@
         margin = m || 10,
         tarElem = $(target),
         offset = tarElem.offset().top;
-        el.animate({
-            scrollTop: offset - m
-        }, speed)
+        // el.animate({
+        //     scrollTop: offset - m
+        // }, speed)
+        el.grollTo( offset - m, speed )
     };
     $.fn.grollTo = function (tar, sp) {
         var el = $(this),
